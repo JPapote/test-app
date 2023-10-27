@@ -1,0 +1,35 @@
+<div class="container">
+    <div [formGroup]="form" class="form">
+        <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" formControlName="name" />
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>Apellido</mat-label>
+            <input matInput type="text" formControlName="lastName" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" />
+            <mat-icon matSuffix> email</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Telefono</mat-label>
+            <input matInput formControlName="phone"  mask="(XXX) XXXX-XXXX"/>
+            <mat-icon matSuffix>phone</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>País</mat-label>
+            <input matInput type="text" formControlName="country" />
+            <mat-icon matSuffix> location_on</mat-icon>
+        </mat-form-field>
+
+        <div>
+            <button type="submit" mat-raised-button (click)="sendData()" color="primary">Enviar</button>
+        </div>
+    </div>
+</div>

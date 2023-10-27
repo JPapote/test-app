@@ -1,0 +1,24 @@
+<div class="container">
+    <section>
+        <h4>Selecciona un formulario: </h4>
+        <mat-radio-group [ngModel]="check()" (change)="changeForm($event)">
+            <mat-radio-button value="form1">Form1</mat-radio-button>
+            <mat-radio-button value="form2">Form2</mat-radio-button>
+            <mat-radio-button value="form3">Form3</mat-radio-button>
+        </mat-radio-group>
+        <div>
+            <div class="form" *ngIf="formActive == 'form1'">
+                <h3>Form1</h3>
+                <app-generic-form input="false" />
+            </div>
+            <div class="form" *ngIf="formActive == 'form2'">
+                <h3>Form2</h3>
+                <app-generic-form select="false" />
+            </div>
+            <div class="form" *ngIf="formActive == 'form3'">
+                <h3>Form3</h3>
+                <app-generic-form textArea="false" />
+            </div>
+        </div>
+    </section>
+</div>
